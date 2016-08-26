@@ -62,6 +62,7 @@ set shm=I
 set cursorline
 set lazyredraw
 set ttyfast
+set hlsearch
 
 " ---
 " 256 colors
@@ -101,7 +102,7 @@ let mapleader = ' '
 nmap <leader>d :NERDTreeToggle<CR><CR>
 "nmap <leader>f :NERDTreeFind<CR>
 nmap <leader>w :w<CR>
-nmap <leader>e :e
+nmap <leader>B :BufExplorer
 nmap <leader>n :nohlsearch<CR>
 inoremap <S-Tab> <C-V><Tab>
 "insert tab for makefiles
