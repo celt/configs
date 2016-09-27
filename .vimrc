@@ -30,6 +30,7 @@ Plug 'chase/vim-ansible-yaml' "original repository
 "Plug 'honza/vim-snippets'
 "Plug 'Valloric/YouCompleteMe'
 Plug 'edkolev/tmuxline.vim'
+Plug 'ctrlpvim/ctrlp.vim'
 call plug#end()
 delc PlugUpgrade " The caveat is that you should *never* use PlugUpgrade
 
@@ -48,7 +49,7 @@ set number
 set list
 set listchars=tab:▸\ ,trail:▫
 set scrolloff=4 " show context above/below cursorline
-set expandtab "expand tabs to spaces
+"set expandtab "expand tabs to spaces
 set shiftwidth=2 " normal mode indentation commands use 2 spaces
 set showcmd
 set smartcase " case-sensitive search if any caps
@@ -62,7 +63,6 @@ set shm=I
 set cursorline
 set lazyredraw
 set ttyfast
-set hlsearch
 
 " ---
 " 256 colors
@@ -102,7 +102,7 @@ let mapleader = ' '
 nmap <leader>d :NERDTreeToggle<CR><CR>
 "nmap <leader>f :NERDTreeFind<CR>
 nmap <leader>w :w<CR>
-nmap <leader>B :BufExplorer
+nmap <leader>B :CtrlPBuffer<CR>
 nmap <leader>n :nohlsearch<CR>
 inoremap <S-Tab> <C-V><Tab>
 "insert tab for makefiles
@@ -124,3 +124,9 @@ colorscheme tomorrow-night "colors
 " autocmd for match file extensions
 "
 autocmd BufRead,BufNewFile *.md set filetype=markdown
+
+" ---
+"  calendar settings
+"
+let g:calendar_google_calendar = 1
+let g:calendar_google_task = 1
